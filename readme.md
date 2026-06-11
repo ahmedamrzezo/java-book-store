@@ -1,18 +1,3 @@
-# Module 03: Bootstrapping the Java EE Application
-
-This module takes the installed tools to bootstrap an empty Java EE application and execute it.
-
-
-## Demo 
-
-* To bootstrap the application use the following Maven archetype : `mvn -DarchetypeGroupId=org.codehaus.mojo.archetypes -DarchetypeArtifactId=webapp-javaee7 -DarchetypeVersion=1.1 -DgroupId=com.pluralsight.java-ee-getting-started -DartifactId=bookstore-back -Dversion=1.0 -Darchetype.interactive=false --batch-mode -Dpackage=com.pluralsight.bookstore archetype:generate`. This command creates a Maven project structure under the `bookstore-back` directory.
-* In the `pom.xml` add `<finalName>bookstore-back</finalName>` so we don't get a `bookstore-back-1.0` URL but just `bookstore-back`
-* In the `pom.xml` change the versions of Java, Java EE and the Maven plugins with properties:
-* ``` <properties> <version.java>1.8</version.java> <version.javaee>7.0</version.javaee> <!-- Plugins --> <version.compiler.plugin>3.8.0</version.compiler.plugin> <version.dependency.plugin>3.1.1</version.dependency.plugin> <version.war.plugin>3.2.2</version.war.plugin> </properties> ```
-
-
-## Structure 
-
 The BookStore application is divided into a Java EE REST back-end (`bookstore-back`) and an Angular front-end (`bookstore-front`).
 
 
